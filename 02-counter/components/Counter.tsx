@@ -16,7 +16,8 @@ const Counter: React.FC<CounterProps> = ({ initialValue = 0 }) => {
 
     const counterStyle = {
         fontSize: 100,
-        color: count > 0 ? '#10B981' : '#EF4444',
+        color: isAtZero ? '#6d7074ff' : count > 0 ? '#10B981' : '#EF4444',
+
     } as const;
 
     return (
