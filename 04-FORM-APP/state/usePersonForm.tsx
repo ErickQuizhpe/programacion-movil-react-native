@@ -21,6 +21,7 @@ export const usePersonForm = () => {
     }
 
     const nextStep = () => goToStep(step + 1);
+    const prevStep = () => goToStep(Math.max(0, step - 1));
   
-    return {person, step, nextStep, updateField};
+    return {person, step, nextStep, prevStep, updateField};
 }
