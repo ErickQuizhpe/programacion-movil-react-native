@@ -4,9 +4,9 @@ import { FromButton } from "../components/FromButton"
 
 type SummaryScreenProps = {
   person: Person
-  onBack?: () => void
+  onReset?: () => void
 }
-export const SummaryScreen = ({ person, onBack }: SummaryScreenProps) => {
+export const SummaryScreen = ({ person, onReset }: SummaryScreenProps) => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Resumen</Text>
@@ -16,7 +16,7 @@ export const SummaryScreen = ({ person, onBack }: SummaryScreenProps) => {
         <Text style={styles.row}>Correo: {person.email}</Text>
         <Text style={styles.row}>Telefono: {person.phone}</Text>
       </View>
-      <FromButton label="Regresar" onPress={onBack} />
+      <FromButton label="Regresar" onPress={onReset} />
     </View>
   )
 }

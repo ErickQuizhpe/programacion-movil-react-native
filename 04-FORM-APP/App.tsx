@@ -8,7 +8,7 @@ import { SafeAreaView } from 'react-native';
 
 export default function App() {
 
-  const { person, updateField, step, nextStep, prevStep } = usePersonForm();
+  const { person, updateField, step, nextStep, reset } = usePersonForm();
   
   const renderScreen = () => {
     if (step === 0) {
@@ -17,7 +17,7 @@ export default function App() {
     if (step === 1) {
       return <ContactInfoScreen person={person} onChange={updateField} onNext={nextStep} />
     }
-    return <SummaryScreen person={person} onBack={prevStep} />
+    return <SummaryScreen person={person} onReset={reset} />
   }
 
   return (

@@ -13,7 +13,6 @@ export const usePersonForm = () => {
     };
 
     const updateField = (field: keyof Person, value: string) => {
-        console.log(value)
         setPerson(prev => ({
                 ...prev,
                 [field]: value
@@ -21,7 +20,10 @@ export const usePersonForm = () => {
     }
 
     const nextStep = () => goToStep(step + 1);
-    const prevStep = () => goToStep(Math.max(0, step - 1));
+    const reset = () => {
+        setPerson(emptyPerson);
+        setStep(0);
+    }
   
-    return {person, step, nextStep, prevStep, updateField};
+    return {person, step, nextStep, updateField, reset};
 }
