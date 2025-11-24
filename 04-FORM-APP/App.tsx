@@ -17,7 +17,7 @@ export default function App() {
     if (step === 1) {
       return <ContactInfoScreen person={person} onChange={updateField} onNext={nextStep} />
     }
-    return <SummaryScreen person={person} onReset={reset} />
+    return <SummaryScreen person={person} onBlack={reset} />
   }
 
   return (

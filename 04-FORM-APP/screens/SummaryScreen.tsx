@@ -1,12 +1,12 @@
 import { Text, View, StyleSheet } from "react-native"
 import { Person } from "../models/person"
-import { FromButton } from "../components/FromButton"
+import { FromButton } from "../components/FormButton"
 
 type SummaryScreenProps = {
   person: Person
-  onReset?: () => void
+  onBlack?: () => void
 }
-export const SummaryScreen = ({ person, onReset }: SummaryScreenProps) => {
+export const SummaryScreen = ({ person, onBlack }: SummaryScreenProps) => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Resumen</Text>
@@ -16,7 +16,7 @@ export const SummaryScreen = ({ person, onReset }: SummaryScreenProps) => {
         <Text style={styles.row}>Correo: {person.email}</Text>
         <Text style={styles.row}>Telefono: {person.phone}</Text>
       </View>
-      <FromButton label="Regresar" onPress={onReset} />
+      <FromButton label="Regresar" onPress={onBlack} />
     </View>
   )
 }

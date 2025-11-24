@@ -1,7 +1,7 @@
 import { Text, View , StyleSheet } from "react-native"
 import { FormInput } from "../components/FormInput"
 import { Person } from "../models/person"
-import { FromButton } from "../components/FromButton";
+import { FromButton } from "../components/FormButton";
 
 
 type PersonalInfoScreenProps = {
